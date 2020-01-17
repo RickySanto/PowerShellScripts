@@ -17,7 +17,7 @@ $Date = Get-Date -Format dd-MM-yyyy
 # Load PowerCli #
 # Connect to vCenter Server #
 $vCenterServer = "Server.domain.com" #Enter here the vCenter server name
-Connect-ViServer $vCenterServer -Credential $Cred $vCenterServer
+Connect-ViServer $vCenterServer -Credential $Cred
 # Delete VM's from vCenter #
 ForEach ($Server in $Servers){
     if((Get-VM $Server).PowerState -eq "PoweredOn"){
